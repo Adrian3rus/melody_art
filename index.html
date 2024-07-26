@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Online</title>
+    <link rel="stylesheet" href="./assets/estilos/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Mi Tienda Online</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="home" class="container mt-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagen1.jpg" class="d-block w-100" alt="Producto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagen2.jpg" class="d-block w-100" alt="Producto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagen3.jpg" class="d-block w-100" alt="Producto 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </section>
+        
+
+
+
+        <section id="home">
+            <h1>Bienvenido a Mi Tienda Online</h1>
+            <p>Encuentra los mejores productos aquí.</p>
+        </section>
+        <section id="products" class="container mt-5">
+            <h2 class="text-center mb-4">Productos Destacados</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 1</h3>
+                            <p class="card-text">Descripción del producto 1</p>
+                            <button class="btn btn-primary" onclick="addToCart({name: 'Producto 1', description: 'Descripción del producto 1', price: 100})">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Producto 2</h3>
+                            <p class="card-text">Descripción del producto 2</p>
+                            <button class="btn btn-primary" onclick="addToCart({name: 'Producto 1', description: 'Descripción del producto 1', price: 100})">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agrega más productos aquí -->
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form action="/submit" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section id="about">
+            <h2>Sobre Nosotros</h2>
+            <p>Información sobre la tienda.</p>
+        </section>
+
+        <section id="cart" class="container mt-5">
+            <h2 class="text-center mb-4">Carrito de Compras</h2>
+            <div id="cart-items" class="row">
+                <!-- Aquí se agregarán los productos -->
+            </div>
+            <div class="text-center mt-4">
+                <button id="checkout-button" class="btn btn-primary">Proceder al Pago</button>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Tienda Online</p>
+        <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+            <img src="./assets/img/wazap.png" alt="WhatsApp">
+            <span class="tooltip-text">¿tenes preguntas?</span>
+        </a>
+        
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./assets/scripts/comprar.js"></script>
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+
+</body>
+</html>
