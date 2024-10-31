@@ -1,0 +1,57 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Laptop Lenovo IdeaPad 3",
+            "description": "Laptop con procesador Intel Core i5, 8GB de RAM, 256GB SSD, pantalla de 15.6 pulgadas.",
+            "price": 499.99,
+            "images": [
+                "https://example.com/images/laptop-lenovo-ideapad-3-front.jpg",
+                "https://example.com/images/laptop-lenovo-ideapad-3-back.jpg"
+            ],
+            "specifications": {
+                "processor": "Intel Core i5-1035G1",
+                "ram": "8GB DDR4",
+                "storage": "256GB SSD",
+                "screen_size": "15.6 inches",
+                "operating_system": "Windows 10"
+            },
+            "availability": "In Stock",
+            "shipping": {
+                "weight": "1.85kg",
+                "dimensions": "35.9 x 24.2 x 2 cm",
+                "shipping_cost": 15.00
+            }
+        },
+        {
+            "id": 2,
+            "name": "Smartphone Samsung Galaxy S21",
+            "description": "Teléfono móvil con pantalla de 6.2 pulgadas, 128GB de almacenamiento, cámara de 64MP.",
+            "price": 799.99,
+            "currency": "USD",
+            "category": "Mobile Phones",
+            "brand": "Samsung",
+            "stock": 50,
+            "rating": 4.7,
+            "reviews": 254,
+            "images": [
+                "https://example.com/images/samsung-galaxy-s21-front.jpg",
+                "https://example.com/images/samsung-galaxy-s21-back.jpg"
+            ],
+            "specifications": {
+                "processor": "Exynos 2100",
+                "ram": "8GB",
+                "storage": "128GB",
+                "screen_size": "6.2 inches",
+                "battery": "4000mAh",
+                "operating_system": "Android 11"
+            },
+            "availability": "In Stock",
+            "shipping": {
+                "weight": "0.169kg",
+                "dimensions": "15.1 x 7.1 x 0.79 cm",
+                "shipping_cost": 10.00
+            }
+        }
+    ]
+}

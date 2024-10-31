@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tienda Online</title>
+    <title>Melody Art.</title>
     <link rel="stylesheet" href="./assets/estilos/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Mi Tienda Online</a>
+            <a class="navbar-brand" href="#">Melody Art.</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,13 +36,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="imagen1.jpg" class="d-block w-100" alt="Producto 1">
+                        <img src="./assets/img/car1.jpg" class="d-block w-100" alt="Producto 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagen2.jpg" class="d-block w-100" alt="Producto 2">
+                        <img src="./assets/img/car1.jpg" class="d-block w-100" alt="Producto 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagen3.jpg" class="d-block w-100" alt="Producto 3">
+                        <img src="./assets/img/car1.jpg" class="d-block w-100" alt="Producto 3">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -90,7 +90,7 @@
         
         <section id="contact">
             <h2>Contacto</h2>
-            <form action="/submit" method="post">
+            <form id="contactForm" action="/submit" method="post">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name">
                 <label for="email">Email:</label>
@@ -103,6 +103,24 @@
         <section id="about">
             <h2>Sobre Nosotros</h2>
             <p>Información sobre la tienda.</p>
+            <h2>Breve Historia</h2>
+            <p>La Historia de la Creación del Arte con Porcelana Fría
+
+                En un pequeño pueblo, rodeado de montañas y ríos, vivía una artista llamada Elena. Desde niña, Elena soñaba con crear esculturas que capturaran la belleza de su entorno. Sin embargo, había un problema: no contaba con un horno para trabajar la arcilla tradicional.
+                
+                Un día, mientras caminaba por el bosque, Elena encontró un material blanco y suave que parecía arcilla. Intrigada, decidió llevarlo a casa y experimentar. Al moldearlo, se dio cuenta de que podía crear figuras con gran detalle sin necesidad de horneado. Así nació su primera escultura: un pequeño pájaro que parecía cobrar vida en sus manos.
+                
+                Con el tiempo, Elena perfeccionó su técnica, mezclando el material que había encontrado con ingredientes naturales que le permitían darle la consistencia deseada. Pronto, su hogar se llenó de figuras: flores, animales y personajes de cuentos que contaban historias de su infancia.
+                
+                La fama de las esculturas de Elena creció, y visitantes de otros pueblos comenzaron a llegar para admirar su trabajo. Sin embargo, más allá de la popularidad, lo que realmente la inspiraba era la conexión que sus esculturas creaban con las personas. Cada pieza era un reflejo de su amor por la naturaleza y su deseo de compartir esa belleza.
+                
+                Un día, un anciano sabio del pueblo le dijo: "Elena, tus esculturas son como los sueños que nunca se apagan. Pero, ¿has pensado en compartir tu arte con el mundo?" Su consejo resonó en ella, y así decidió abrir una tienda en línea.
+                
+                Elena comenzó a recibir pedidos de todas partes, y no solo creaba esculturas por encargo, sino que también enseñaba a otros a trabajar con porcelana fría. Poco a poco, la técnica se fue expandiendo, convirtiéndose en un arte apreciado en muchas culturas.
+                
+                Hoy, el arte con porcelana fría es conocido como un medio versátil y accesible para artistas de todas partes. Gracias a la visión y la pasión de una joven artista, la porcelana fría ha transformado la manera en que las personas expresan su creatividad, creando una comunidad unida por la belleza del arte.
+                
+                Y así, la historia de la porcelana fría continúa, inspirando a nuevas generaciones a moldear sus sueños y compartirlos con el mundo.</p>
         </section>
 
         <section id="cart" class="container mt-5">
@@ -114,6 +132,9 @@
                 <button id="checkout-button" class="btn btn-primary">Proceder al Pago</button>
             </div>
         </section>
+
+        <h1>Lista de Productos</h1>
+        <div id="product-list"></div>
         
     </main>
 
@@ -131,6 +152,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="./assets/scripts/comprar.js"></script>
 <script src="https://sdk.mercadopago.com/js/v2"></script>
+<script src="./assets/scripts/producto.js"></script>
 
 </body>
 </html>

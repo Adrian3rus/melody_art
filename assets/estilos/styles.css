@@ -173,3 +173,77 @@ footer {
     visibility: visible;
     opacity: 1;
 }
+
+
+/* Contenedor principal */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Estilo para cada producto */
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(100% - 40px); /* 100% menos márgenes */
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+/* Estilo para la imagen del producto */
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el nombre del producto */
+.product h2 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+/* Estilo para la descripción del producto */
+.product p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Estilo para el precio del producto */
+.product p:last-child {
+    font-weight: bold;
+    color: #009688;
+    font-size: 1.1em;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 100%; /* 100% del ancho */
+        margin: 10px 0;
+    }
+}
+
+/* Media Queries para pantallas medianas */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .product {
+        flex: 1 1 calc(50% - 40px); /* Dos productos por fila */
+    }
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 1025px) {
+    .product {
+        flex: 1 1 calc(33.333% - 40px); /* Tres productos por fila */
+    }
+}
